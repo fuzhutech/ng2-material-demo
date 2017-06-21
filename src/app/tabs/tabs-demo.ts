@@ -1,20 +1,27 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
   moduleId: module.id,
   selector: 'tabs-demo',
   templateUrl: 'tabs-demo.html',
-  styleUrls: ['tabs-demo.css'],
+  styleUrls: ['tabs-demo.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class TabsDemo {
   // Nav bar demo
   tabLinks = [
     {label: 'Sun', link: 'sunny-tab'},
-    {label: 'Rain', link: 'rainy-tab'},
+    {label: 'Rain', link: 'rainy-tab1'},
     {label: 'Fog', link: 'foggy-tab'},
   ];
+
+  test(){
+    console.log(this.tabLinks);
+
+    this.tabLinks.push({label: 'Fog4', link: 'foggy-tab'});
+    console.log(this.tabLinks);
+  }
 
   // Standard tabs demo
   tabs = [
@@ -91,7 +98,12 @@ export class TabsDemo {
   selector: 'sunny-routed-content',
   template: 'This is the routed body of the sunny tab.',
 })
-export class SunnyTabContent {}
+export class SunnyTabContent implements OnInit {
+
+  ngOnInit(): void {
+    console.log("ces1");
+  }
+}
 
 
 @Component({
@@ -99,7 +111,12 @@ export class SunnyTabContent {}
   selector: 'rainy-routed-content',
   template: 'This is the routed body of the rainy tab.',
 })
-export class RainyTabContent {}
+export class RainyTabContent {
+
+  ngOnInit(): void {
+    console.log("ces2");
+  }
+}
 
 
 @Component({
@@ -107,4 +124,9 @@ export class RainyTabContent {}
   selector: 'foggy-routed-content',
   template: 'This is the routed body of the foggy tab.',
 })
-export class FoggyTabContent {}
+export class FoggyTabContent {
+
+  ngOnInit(): void {
+    console.log("ces3");
+  }
+}

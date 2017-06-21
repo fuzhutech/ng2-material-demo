@@ -7,7 +7,7 @@ import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/ma
   moduleId: module.id,
   selector: 'dialog-demo',
   templateUrl: 'dialog-demo.html',
-  styleUrls: ['dialog-demo.css'],
+  styleUrls: ['dialog-demo.scss'],
 })
 export class DialogDemo {
   dialogRef: MdDialogRef<JazzDialog>;
