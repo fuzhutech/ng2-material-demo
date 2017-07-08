@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'progress-spinner-demo',
   templateUrl: 'progress-spinner-demo.html',
-  styleUrls: ['progress-spinner-demo.scss'],
+  styleUrls: ['progress-spinner-demo.css'],
 })
 export class ProgressSpinnerDemo {
   progressValue: number = 60;

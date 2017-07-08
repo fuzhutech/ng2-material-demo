@@ -6,7 +6,7 @@ import {MdRipple} from '@angular/material';
   moduleId: module.id,
   selector: 'ripple-demo',
   templateUrl: 'ripple-demo.html',
-  styleUrls: ['ripple-demo.scss'],
+  styleUrls: ['ripple-demo.css'],
 })
 export class RippleDemo {
   @ViewChild(MdRipple) ripple: MdRipple;
@@ -15,7 +15,7 @@ export class RippleDemo {
   disabled = false;
   unbounded = false;
   rounded = false;
-  radius: number = null;
+  radius: number;
   rippleSpeed = 1;
   rippleColor = '';
 

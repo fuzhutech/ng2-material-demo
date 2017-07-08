@@ -4,7 +4,7 @@ import {MdSnackBar, MdSnackBarConfig} from '@angular/material';
 @Component({
   moduleId: module.id,
   selector: 'snack-bar-demo',
-  styleUrls: ['snack-bar-demo.scss'],
+  styleUrls: ['snack-bar-demo.css'],
   templateUrl: 'snack-bar-demo.html',
   encapsulation: ViewEncapsulation.None,
 })
@@ -21,7 +21,7 @@ export class SnackBarDemo {
   open() {
     let config = new MdSnackBarConfig();
     config.duration = this.autoHide;
-    config.extraClasses = this.addExtraClass ? ['party'] : null;
-    this.snackBar.open(this.message, this.action && this.actionButtonLabel, config);
+    config.extraClasses = this.addExtraClass ? ['party'] : undefined;
+    this.snackBar.open(this.message, this.action ? this.actionButtonLabel : undefined, config);
   }
 }

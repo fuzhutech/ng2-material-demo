@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'toolbar-demo',
   templateUrl: 'toolbar-demo.html',
-  styleUrls: ['toolbar-demo.scss'],
+  styleUrls: ['toolbar-demo.css'],
 })
 export class ToolbarDemo {
 

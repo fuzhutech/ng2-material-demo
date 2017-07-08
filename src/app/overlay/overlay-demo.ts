@@ -20,7 +20,7 @@ import {
   moduleId: module.id,
   selector: 'overlay-demo',
   templateUrl: 'overlay-demo.html',
-  styleUrls: ['overlay-demo.scss'],
+  styleUrls: ['overlay-demo.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class OverlayDemo {

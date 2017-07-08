@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'baseline-demo',
   templateUrl: 'baseline-demo.html',
-  styleUrls: ['baseline-demo.scss'],
+  styleUrls: ['baseline-demo.css'],
 })
 export class BaselineDemo {
   name: string;

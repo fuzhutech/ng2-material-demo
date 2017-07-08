@@ -1,27 +1,20 @@
-import {Component, ViewEncapsulation, OnInit} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
   moduleId: module.id,
   selector: 'tabs-demo',
   templateUrl: 'tabs-demo.html',
-  styleUrls: ['tabs-demo.scss'],
+  styleUrls: ['tabs-demo.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class TabsDemo {
   // Nav bar demo
   tabLinks = [
     {label: 'Sun', link: 'sunny-tab'},
-    {label: 'Rain', link: 'rainy-tab1'},
+    {label: 'Rain', link: 'rainy-tab'},
     {label: 'Fog', link: 'foggy-tab'},
   ];
-
-  test(){
-    console.log(this.tabLinks);
-
-    this.tabLinks.push({label: 'Fog4', link: 'foggy-tab'});
-    console.log(this.tabLinks);
-  }
 
   // Standard tabs demo
   tabs = [
@@ -90,6 +83,16 @@ export class TabsDemo {
   deleteTab(tab: any) {
     this.dynamicTabs.splice(this.dynamicTabs.indexOf(tab), 1);
   }
+
+  swapTabLinks() {
+    const temp = this.tabLinks[0];
+    this.tabLinks[0] = this.tabLinks[1];
+    this.tabLinks[1] = temp;
+  }
+
+  addToLabel() {
+    this.tabLinks.forEach(link => link.label += 'extracontent');
+  }
 }
 
 
@@ -98,12 +101,7 @@ export class TabsDemo {
   selector: 'sunny-routed-content',
   template: 'This is the routed body of the sunny tab.',
 })
-export class SunnyTabContent implements OnInit {
-
-  ngOnInit(): void {
-    console.log("ces1");
-  }
-}
+export class SunnyTabContent {}
 
 
 @Component({
@@ -111,12 +109,7 @@ export class SunnyTabContent implements OnInit {
   selector: 'rainy-routed-content',
   template: 'This is the routed body of the rainy tab.',
 })
-export class RainyTabContent {
-
-  ngOnInit(): void {
-    console.log("ces2");
-  }
-}
+export class RainyTabContent {}
 
 
 @Component({
@@ -124,9 +117,4 @@ export class RainyTabContent {
   selector: 'foggy-routed-content',
   template: 'This is the routed body of the foggy tab.',
 })
-export class FoggyTabContent {
-
-  ngOnInit(): void {
-    console.log("ces3");
-  }
-}
+export class FoggyTabContent {}

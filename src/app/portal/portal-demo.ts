@@ -10,7 +10,7 @@ import {
   moduleId: module.id,
   selector: 'portal-demo',
   templateUrl: 'portal-demo.html',
-  styleUrls: ['portal-demo.scss'],
+  styleUrls: ['portal-demo.css'],
 })
 export class PortalDemo {
   @ViewChildren(TemplatePortalDirective) templatePortals: QueryList<Portal<any>>;

@@ -1,12 +1,13 @@
 import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
 import {FormControl, NgModel} from '@angular/forms';
 import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/map';
 
 @Component({
   moduleId: module.id,
   selector: 'autocomplete-demo',
   templateUrl: 'autocomplete-demo.html',
-  styleUrls: ['autocomplete-demo.scss'],
+  styleUrls: ['autocomplete-demo.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class AutocompleteDemo {
@@ -88,8 +89,11 @@ export class AutocompleteDemo {
   }
 
   filterStates(val: string) {
-    return val ? this.states.filter(s => new RegExp(`^${val}`, 'gi').test(s.name))
-               : this.states;
-  }
+    if (val) {
+      const filterValue = val.toLowerCase();
+      return this.states.filter(state => state.name.toLowerCase().startsWith(filterValue));
+    }
 
+    return this.states;
+  }
 }

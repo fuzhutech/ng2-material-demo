@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'menu-demo',
   templateUrl: 'menu-demo.html',
-  styleUrls: ['menu-demo.scss'],
+  styleUrls: ['menu-demo.css'],
 })
 export class MenuDemo {
   selected = '';

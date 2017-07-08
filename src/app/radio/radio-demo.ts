@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'radio-demo',
   templateUrl: 'radio-demo.html',
-  styleUrls: ['radio-demo.scss'],
+  styleUrls: ['radio-demo.css'],
 })
 export class RadioDemo {
   isDisabled: boolean = false;

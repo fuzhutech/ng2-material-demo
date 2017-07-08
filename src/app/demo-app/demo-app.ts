@@ -24,7 +24,7 @@ export class DemoAppOnPush {}
   moduleId: module.id,
   selector: 'demo-app',
   templateUrl: 'demo-app.html',
-  styleUrls: ['demo-app.scss'],
+  styleUrls: ['demo-app.css'],
   host: {
     '[class.unicorn-dark-theme]': 'dark',
   },
@@ -42,6 +42,7 @@ export class DemoApp {
     {name: 'Checkbox', route: 'checkbox'},
     {name: 'Datepicker', route: 'datepicker'},
     {name: 'Dialog', route: 'dialog'},
+    {name: 'Expansion Panel', route: 'expansion'},
     {name: 'Gestures', route: 'gestures'},
     {name: 'Grid List', route: 'grid-list'},
     {name: 'Icon', route: 'icon'},
@@ -60,11 +61,13 @@ export class DemoApp {
     {name: 'Slider', route: 'slider'},
     {name: 'Slide Toggle', route: 'slide-toggle'},
     {name: 'Snack Bar', route: 'snack-bar'},
+    {name: 'Table', route: 'table'},
     {name: 'Tabs', route: 'tabs'},
     {name: 'Toolbar', route: 'toolbar'},
     {name: 'Tooltip', route: 'tooltip'},
     {name: 'Platform', route: 'platform'},
-    {name: 'Style', route: 'style'}
+    {name: 'Style', route: 'style'},
+    {name: 'Typography', route: 'typography'}
   ];
 
   constructor(private _element: ElementRef) {

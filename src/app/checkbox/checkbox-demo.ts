@@ -41,6 +41,11 @@ export class MdCheckboxDemoNestedChecklist {
 
   allComplete(task: Task): boolean {
     let subtasks = task.subtasks;
+
+    if (!subtasks) {
+      return false;
+    }
+
     return subtasks.every(t => t.completed) ? true
         : subtasks.every(t => !t.completed) ? false
         : task.completed;
@@ -60,7 +65,7 @@ export class MdCheckboxDemoNestedChecklist {
   moduleId: module.id,
   selector: 'md-checkbox-demo',
   templateUrl: 'checkbox-demo.html',
-  styleUrls: ['checkbox-demo.scss'],
+  styleUrls: ['checkbox-demo.css'],
 })
 export class CheckboxDemo {
   isIndeterminate: boolean = false;

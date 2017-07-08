@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'datepicker-demo',
   templateUrl: 'datepicker-demo.html',
-  styleUrls: ['datepicker-demo.scss'],
+  styleUrls: ['datepicker-demo.css'],
 })
 export class DatepickerDemo {
   touch: boolean;

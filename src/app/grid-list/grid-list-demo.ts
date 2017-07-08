@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'grid-list-demo',
   templateUrl: 'grid-list-demo.html',
-  styleUrls: ['grid-list-demo.scss']
+  styleUrls: ['grid-list-demo.css']
 })
 export class GridListDemo {
   tiles: any[] = [

@@ -37,15 +37,49 @@ import {PlatformDemo} from './platform/platform-demo';
 import {AutocompleteDemo} from './autocomplete/autocomplete-demo';
 import {InputDemo} from './input/input-demo';
 import {StyleDemo} from './style/style-demo';
+import {TableDemo} from './table/table-demo';
+import {PeopleDatabase} from './table/people-database';
 import {DatepickerDemo} from './datepicker/datepicker-demo';
-import {FullscreenOverlayContainer, OverlayContainer} from '@angular/material';
+import {TypographyDemo} from './typography/typography-demo';
+import {ExpansionDemo} from './expansion/expansion-demo';
 import {
-  MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule,
-  MdChipsModule, MdCoreModule, MdDatepickerModule, MdDialogModule, MdGridListModule, MdIconModule,
-  MdInputModule, MdListModule, MdMenuModule, MdNativeDateModule, MdProgressBarModule, MdRadioModule,
-  MdProgressSpinnerModule, MdRippleModule, MdSelectModule, MdSidenavModule, MdSliderModule,
-  MdSlideToggleModule, MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule
+  FullscreenOverlayContainer,
+  MdAutocompleteModule,
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdChipsModule,
+  MdCoreModule,
+  MdTableModule,
+  MdDatepickerModule,
+  MdDialogModule,
+  MdExpansionModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule,
+  MdListModule,
+  MdMenuModule,
+  MdNativeDateModule,
+  MdPaginatorModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule,
+  MdSortModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule,
+  OverlayContainer,
+  StyleModule
 } from '@angular/material';
+import {CdkTableModule} from '@angular/cdk';
+import {TableHeaderDemo} from './table/table-header-demo';
 
 /**
  * NgModule that includes all Material modules that are required to serve the demo-app.
@@ -54,38 +88,37 @@ import {
   exports: [
     MdAutocompleteModule,
     MdButtonModule,
-    /****->*/
     MdButtonToggleModule,
     MdCardModule,
     MdCheckboxModule,
     MdChipsModule,
+    MdTableModule,
     MdDatepickerModule,
     MdDialogModule,
+    MdExpansionModule,
     MdGridListModule,
-    /*<---**/
     MdIconModule,
     MdInputModule,
     MdListModule,
-    /***--->*/
     MdMenuModule,
     MdCoreModule,
+    MdPaginatorModule,
     MdProgressBarModule,
     MdProgressSpinnerModule,
     MdRadioModule,
     MdRippleModule,
     MdSelectModule,
-    /*<---**/
     MdSidenavModule,
-    /***--->*/
     MdSlideToggleModule,
     MdSliderModule,
     MdSnackBarModule,
+    MdSortModule,
     MdTabsModule,
-    /*<---**/
     MdToolbarModule,
-    /***--->*/
     MdTooltipModule,
     MdNativeDateModule,
+    CdkTableModule,
+    StyleModule
   ]
 })
 export class DemoMaterialModule {}
@@ -103,7 +136,6 @@ export class DemoMaterialModule {}
   ],
   declarations: [
     AutocompleteDemo,
-    /***--->*/
     BaselineDemo,
     ButtonDemo,
     ButtonToggleDemo,
@@ -111,21 +143,15 @@ export class DemoMaterialModule {}
     ChipsDemo,
     CheckboxDemo,
     DatepickerDemo,
-    /*<---**/
     DemoApp,
     DemoAppOnPush,
-    /***--->*/
     DialogDemo,
     GesturesDemo,
     GridListDemo,
-    /*<---**/
     Home,
-    /***--->*/
     IconDemo,
     InputDemo,
-    /*<---**/
     JazzDialog,
-    /***--->*/
     ContentElementDialog,
     IFrameDialog,
     ListDemo,
@@ -147,16 +173,21 @@ export class DemoMaterialModule {}
     SlideToggleDemo,
     SpagettiPanel,
     StyleDemo,
+    TableHeaderDemo,
     ToolbarDemo,
     TooltipDemo,
+    TableDemo,
     TabsDemo,
     SunnyTabContent,
     RainyTabContent,
     FoggyTabContent,
     PlatformDemo,
+    TypographyDemo,
+    ExpansionDemo,
   ],
   providers: [
-    {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
+    {provide: OverlayContainer, useClass: FullscreenOverlayContainer},
+    PeopleDatabase
   ],
   entryComponents: [
     DemoApp,
